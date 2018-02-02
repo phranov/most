@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Вход</title>
+    <link rel="stylesheet" href="assets/css/signin_style.css" />
+</head>
+
+
+<body>
+
+    <!--login-->
+
+    <div id="main-logo" style="text-align: right">
+        <img id="img-seen" src="assets/images/logo.png" alt="Logo" />
+
+    </div>
+    </header>
+
+    <div id="log">
+
+        <form name="input" action="index.html" onsubmit="return login();">
+            <h2> Вход</h2>
+            <input type="text" id="username" placeholder="Въведете име" />
+            <input type="password" id="password" placeholder="Въведете парола" />
+            <input type="submit" id="log-button" value="Вход" />
+        </form>
+
+    </div>
+
+
+
+
+    <script>
+        // Execute this JavaScript function (initUser)immediately after a page has been loaded:
+        window.onload = function() {
+            //get users in json in local storage wiht initUsers
+            initUser();
+        };
+
+        function login() {
+            var username = document.getElementById("username");
+            var pass = document.getElementById("password");
+            //with this usernames in login i use function doLogin to check if they match
+            return doLogin(username.value, pass.value);
+        }
+    </script>
+    <script type="text/javascript" src="assets\js\userManager.js"></script>
+</body>
+
+</html>
